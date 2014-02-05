@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="complete/ddsmoothmenu.css">
+<link rel="stylesheet" type="text/css" href="complete/ddsmoothmenu-v.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="ddsmoothmenu.js">
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu2", //Menu DIV id
+	orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+	//customtheme: ["#804000", "#482400"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div id="smoothmenu1" class="ddsmoothmenu">
+	<ul>
+		<li><a href="#">事業内容</a>
+			<ul>
+				<li><a href="#">○○サービス</a></li>
+				<li><a href="#">△△サービス</a></li>
+				<li><a href="#">××サービス</a></li>
+			</ul>
+		</li>
+		<li><a href="#">会社概要</a>
+			<ul>
+				<li><a href="#">代表挨拶</a></li>
+				<li><a href="#">スタッフ紹介</a></li>
+				<li><a href="#">アクセスマップ</a></li>
+				<li><a href="#">プライバシーポリシー</a></li>
+			</ul>
+		</li>
+		<li><a href="#">お問い合わせ</a></li>
+	</ul>
+</div>
+
+</body>
+</html>
