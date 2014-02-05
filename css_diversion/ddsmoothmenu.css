@@ -133,3 +133,5 @@ background: silver;
 .toplevelshadow{ /*shadow opacity for NON CSS3 capable browsers. Doesn't work in IE*/
 opacity: 0.8;
 }
+
+/* ######### ここから継承をできるだけ使いsmoothnaviと同じ動きをするコードを書いてみましょう ######### */
