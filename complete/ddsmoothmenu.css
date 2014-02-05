@@ -94,6 +94,8 @@ top: 6px;
 right: 5px;
 }
 
+#smoothmenu1 ul li a .downarrowclass { background: url(down.gif) no-repeat;width:11px;height:8px;}
+#smoothmenu1 ul li a .rightarrowclass { background: url(right.gif) no-repeat;width:8px;height:11px;}
 /* ######### CSS for shadow added to sub menus  ######### */
 
 .ddshadow{ /*shadow for NON CSS3 capable browsers*/

@@ -17,7 +17,8 @@ position: relative;
 display: inline;
 float: left;
 }
-
+#smoothmenu1 ul li a .downarrowclass { background: url(down.gif) no-repeat;width:11px;height:8px;}
+#smoothmenu1 ul li a .rightarrowclass { background: url(right.gif) no-repeat;width:8px;height:11px;}
 /*Top level menu link items style*/
 .ddsmoothmenu ul li a{
 display: block;
