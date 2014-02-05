@@ -1,3 +1,6 @@
+ul.noscript{
+	display:none;
+}
 .ddsmoothmenu{
 font: bold 12px Verdana;
 background: #414141; /*background of menu bar (default state)*/
@@ -29,15 +32,21 @@ color: #2d2b2b;
 text-decoration: none;
 }
 /* ①三角のアイコンを表示するために追記 */
+/*
 .ddsmoothmenu ul li a.down,
 .ddsmoothmenu ul li a.down:hover{
 	padding-right: 23px;
 	background:url(down.gif) no-repeat 92% center #414141;
 	}
+*/
+
 /* ②このままではhoverした時に背景色が変わらないので上書き */
+/*
 .ddsmoothmenu ul li a.down:hover{
 	background:url(down.gif) no-repeat 92% center #000;
 }
+*/
+
 * html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
 display: inline-block;
 }
@@ -64,10 +73,13 @@ display: none; /*collapse all sub menus to begin with*/
 visibility: hidden;
 }
 /* ③上の.ddsmoothmenu ul li ulで隠されている要素をa.downにマウスオーバーした時に表示する。 */
-.ddsmoothmenu ul li a.down:hover + ul.block{
+/*
+.ddsmoothmenu ul li a.down:hover + ul.block,
+.ddsmoothmenu ul li a.down:hover + ul.block li{
 	display:block;
-	visibility:visible;
 }
+*/
+
 /*Sub level menu list items (undo style from Top level List Items)*/
 .ddsmoothmenu ul li ul li{
 display: list-item;
