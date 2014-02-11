@@ -1,80 +1,75 @@
+/* とりあえずリセット */
 *{
 	margin: 0;
 	padding: 0;
 }
+/* naviを適当な位置に持ってくる */
 div{
 	margin-top: 10px;
 	margin-left: 10px;
 }
+/*
+listを横並びにする
+幅高,font-size,font-weight,背景色はコンプリートを見本に
+*/
 ul li{
-	position:relative;
 	float: left;
 	width: 82px;
 	height: 32px;
-	line-height: 34px;
 	font-size: 12px;
 	font-weight: bold;
-	padding-left:5px;
 	list-style: none;
 	background:#414141;
-	border-right:1px solid #fff;
 }
-ul li:last-child{
-	border-right-width:0;
-}
-
 ul li + li + li{
-	width: 90px;
-	height: 34px;
+	width:93px;
+	height: 32px;
 	background-image: none;
 }
 ul li a{
 	position: relative;
 	overflow: hidden;
 	display:block;
-	width: 100%;
-	height: 100%;
+	height:16px;
+	padding:8px 10px;
 	color: #fff;
 	text-decoration: none;
+	white-space:nowrap;
+	background:url(down.gif) no-repeat 63px center;
+	border-right:1px solid #fff;
 }
-ul li a:before{
-	position:absolute;
-	top: 45%;
-	right:5px;
-	content:'';
-	display:block;
-	width:0;
-	height:0;
-	border-top:6px solid #fff;
-	border-right:6px solid transparent;
-	border-bottom:6px solid transparent;
-	border-left:6px solid transparent;
-}
-ul li a:last-child:before{
-	visibility: hidden;
+/*
+アニメーションの仕込み
+display:noneで隠しても問題ないがアニメーション
+を付加するとnoneとblockの切り替えではアニメーション
+しないためheight:0;で設定
+*/
 
-}
 ul li > ul{
-	position:absolute;
-	left:0px;
-	top:34px;
-	overflow: visible;
-	clear: both;
 	width: 162px;
 	height:0;
-	opacity: 0.7;
+	opacity: 0;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	-ms-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
+/* ul li aの最後のと非表示にしている部分の要素の▽
+最後のul aのボーダーを消すため */
+ul li a:last-child{
+	border-right-width:none;
+}
+ul li > ul a{
+	background-image:none;
+}
+/* 隠している部分の幅高さを親のul liと同じに */
 ul li > ul li{
 	width: 100%;
 	height: 100%;
-	background-image: none;
 }
-ul li:hover > ul {
+/* 隠している部分を:hoverした時に表示する */
+ul li:hover > ul{
 	height: 100%;
 	opacity: 1;
 }
